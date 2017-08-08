@@ -97,3 +97,20 @@ function getTagImages(event) {
     }
 
 }
+
+document.onkeydown = function(e) {
+    e = e || window.event;
+
+    switch(e.which || e.keyCode) {
+        case 37:
+            e.preventDefault();
+            next();                    // left
+            break;
+        case 39:
+            e.preventDefault();
+            previous();                // right
+            break;
+        default: return;               // exit this handler for other keys
+    }
+
+}
