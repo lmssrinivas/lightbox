@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 class="center">Lightbox</h2>
+
+<div class="lightbox">
+
+    <div class="lightbox-container">
+
+        <button class="btn black display-left" onclick="previous()">&#10094;</button>
+        <button class="btn black display-right" onclick="next()">&#10095;</button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" src="images/loading.gif">
+        </div>
+
+    </div>
+    <div class="lightbox-container">
+        <div id="title"> Title</div>
+        <figcaption id="caption">  Caption</figcaption>
+
+        <div class="meta-data">
+            <ul id="tags" class="tags" onclick="getTagImages(event)"></ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
