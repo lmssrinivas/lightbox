@@ -33,7 +33,7 @@ function loadImage(photo){
     };
     getPhotoInfo(photo);
     var src = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
-    titleComponent.innerHTML=photo.title || 'Title ';
+    titleComponent.innerHTML=photo.title + '<a href="'+src+'">'+src+'</a>';
     imgComponent.src=src;
 }
 
