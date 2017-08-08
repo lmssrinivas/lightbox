@@ -33,7 +33,7 @@ function loadImage(photo){
     };
     getPhotoInfo(photo);
     var src = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
-    titleComponent.innerHTML=photo.title;
+    titleComponent.innerHTML=photo.title || 'Title ';
     imgComponent.src=src;
 }
 
@@ -48,12 +48,12 @@ function getPhotoInfo(photo){
 }
 
 function loadMetaData(data) {
-    captionComponent.innerHTML = data.description._content ? data.description._content : '  ';
+    captionComponent.innerHTML = data.description._content || ' Description ';
     tagsComponent.innerHTML='';
     var tags = data.tags.tag;
     tags.forEach(function (tag) {
         var node = document.createElement("li");
-        node.innerHTML=    tag._content;
+        node.innerHTML=    tag._content || ' ';
         node.className='tag';
         tagsComponent.appendChild(node);
     })
